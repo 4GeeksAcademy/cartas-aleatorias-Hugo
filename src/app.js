@@ -1,11 +1,20 @@
-import "bootstrap";
 import "./style.css";
 
+window.onload = () => {
+  document.querySelector('.card').classList.add(nuevoPaloRandom());
+  document.querySelector('.card').innerHTML = nuevoNumeroRandom();
+ };
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let nuevoNumeroRandom= ()=>{
+  let numero = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+  let indexNumero = Math.floor(Math.random() * numero.length);
+  
+  return numero[indexNumero];
+};
 
-window.onload = function() {
-  //write your code here
-  console.log("Todo funciona");
+let nuevoPaloRandom= ()=>{
+  let palo = ["diamantes","espadas","corazones","picas"];
+  let indexPalo = Math.floor(Math.random() * palo.length);
+
+  return palo[indexPalo];
 };

@@ -1,30 +1,66 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-body{
-    background: green;
-    box-sizing: content-box;
+body {
+    background-image: url('https://img.freepik.com/foto-gratis/fichas-casino-dados-mesa-verde_23-2147881287.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
-.card{
-    text-align: center;
-    font-size: 80px;  
-    display: inline-block;
+
+.card {
+    display: flex;
+    justify-content: center;
     margin: auto;
-    height: 500px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
+    background: white;
+    text-align: center;
+    position: relative;
+    font-size: 80px;
     padding: 20px;
     padding-top: 180px;
     border: 1px solid black;
-    border-radius: 5px;
-.top-suit{
+    border-radius: 20px;
+
+    &:before {
         position: absolute;
         top: 0;
         left: 20px;
         font-size: 80px;
     }
-.bottom-suit{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 80px;
-    }  
+
+    &:after {
+
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 80px;
+    }
+
+    &.espadas:before,
+    &.espadas:after {
+        content: '\2660';
+        color: black
+    }
+
+    &.corazones:before,
+    &.corazones:after {
+        content: '\2665';
+        color: red;
+    }
+
+    &.picas:before,
+    &.picas:after {
+        content: '\2663';
+        color: black
+    }
+
+    &.diamantes:before,
+    &.diamantes:after {
+        content: '\2666';
+        color: red;
+    }
 }
